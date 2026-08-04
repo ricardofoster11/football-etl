@@ -219,3 +219,6 @@ __marimo__/
 
 # Anotações
 anotacoes.txt
+
+# Contrato API (em construção)
+docs/api-contract.md
