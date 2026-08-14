@@ -222,3 +222,6 @@ anotacoes.txt
 
 # Contrato API (em construção)
 docs/api-contract.md
+
+# Arquivos de log para validação
+data/raw/*.json
