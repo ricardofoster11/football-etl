@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-def extract_standings(season: str) -> dict:
+def extract_standings(season: str, matchday: int) -> dict:
     api_token = os.getenv("FOOTBALL_DATA_API_TOKEN")
 
     if not api_token:
@@ -21,7 +21,8 @@ def extract_standings(season: str) -> dict:
     }
 
     params = {
-        "season": season
+        "season": season,
+        "matchday": matchday
     }
 
     response = requests.get(

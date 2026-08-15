@@ -3,7 +3,7 @@ import pandas as pd
 from src.validate.standings_validator import validate_ranking
 
 
-def transform_standings(payload: dict) -> pd.DataFrame:
+def transform_standings(payload: dict, matchday: int) -> pd.DataFrame:
     standings = payload["standings"]
 
     total_standings = None
@@ -35,8 +35,11 @@ def transform_standings(payload: dict) -> pd.DataFrame:
         }
     )
 
+    df_ranking["matchday"] = matchday
+
     df_ranking = df_ranking[
         [
+            "matchday",
             "position",
             "team_id",
             "team_name",

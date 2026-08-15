@@ -225,3 +225,6 @@ docs/api-contract.md
 
 # Arquivos de log para validação
 data/raw/*.json
+
+# Arquivo docs dbml
+docs/databases.dbdiagram

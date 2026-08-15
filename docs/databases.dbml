@@ -1,0 +1,40 @@
+Table tbl_teams {
+  season integer
+  team_id integer
+  team_name varchar(100)
+  team_short_name varchar(50)
+  team_tla varchar(3)
+  team_crest varchar(100)
+  created_at timestamp [default: `CURRENT_TIMESTAMP`]  
+
+  indexes {
+    (season, team_id) [pk]
+  }
+}
+
+Table tbl_standings {
+  id integer [pk, increment]
+  season integer
+  gameweek integer
+  position integer
+  team_id integer  
+  /* team_name varchar(100) */
+  /* team_short_name varchar(50) */
+  /* team_tla varchar(3) */
+  /* team_crest varchar(100) */
+  played_games integer
+  form varchar(20)
+  won integer
+  draw integer
+  lost integer
+  points integer
+  goals_for integer
+  goals_against integer
+  goal_difference integer
+  created_at timestamp [default: `CURRENT_TIMESTAMP`]
+    
+}
+
+Ref: tbl_standings.(season, team_id) > tbl_teams.(season, team_id)
+
+
