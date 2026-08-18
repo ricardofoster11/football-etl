@@ -34,14 +34,3 @@ def create_database_engine() -> Engine:
     )
 
     return create_engine(database_url)
-
-
-# def test_database_connection(engine: Engine) -> None:
-#     with engine.connect() as connection:
-#         result = connection.execute(text("SELECT 1"))
-#         value = result.scalar_one()
-
-#     if value != 1:
-#         raise RuntimeError(
-#             "A validação da conexão retornou resultado inesperado."
-#         )

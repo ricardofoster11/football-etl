@@ -1,6 +1,5 @@
-from src.extract.standings_extractor import extract_standings
 from src.load.standings_load import save_raw_payload
-from src.transform.standings_transformer import transform_standings
+## from src.transform.standings_transformer import transform_standings
 from src.config.logger import setup_logging
 from src.orchestrator import execute
 
