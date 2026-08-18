@@ -3,10 +3,6 @@ import pandas as pd
 REQUIRED_COLUMNS = [
     "position",
     "team_id",
-    "team_name",
-    "team_short_name",
-    "team_tla",
-    "team_crest",
     "played_games",
     "form",
     "won",

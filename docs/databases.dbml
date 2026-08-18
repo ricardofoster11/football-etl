@@ -18,10 +18,6 @@ Table tbl_standings {
   gameweek integer
   position integer
   team_id integer  
-  /* team_name varchar(100) */
-  /* team_short_name varchar(50) */
-  /* team_tla varchar(3) */
-  /* team_crest varchar(100) */
   played_games integer
   form varchar(20)
   won integer
