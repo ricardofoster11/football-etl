@@ -4,6 +4,14 @@ Projeto de ETL desenvolvido em Python para extração, transformação e persist
 
 O projeto coleta informações dos times participantes de uma temporada e o histórico da classificação do campeonato por rodada, realiza o tratamento e validação dos dados e persiste as informações em um banco PostgreSQL.
 
+## Dashboard
+
+A classificação é armazenada rodada a rodada, permitindo acompanhar a evolução dos clubes durante o campeonato e comparar diferentes times ao longo da temporada.
+
+![Evolução da posição no campeonato](docs/images/position-evolution.png)
+
+O dashboard utiliza o PostgreSQL como fonte de dados e está sendo desenvolvido no Power BI.
+
 ## Objetivo
 
 O objetivo do projeto é aplicar conceitos de Engenharia e Análise de Dados através da construção de um pipeline ETL completo:
@@ -20,6 +28,8 @@ football-data.org
       Load
         ↓
    PostgreSQL
+        ↓
+   Power BI   
 ```
 
 ## Tecnologias
@@ -146,6 +156,8 @@ football-etl/
 │   └── raw/
 │
 ├── docs/
+│   ├── images/
+│   │   └── position-evolution.png
 │   ├── api-contract.md
 │   └── databases.dbml
 │
@@ -253,15 +265,9 @@ pytest -v
 
 Os testes atuais cobrem inicialmente as transformações dos dados de times e classificação.
 
-## Dashboard
-
-Os dados armazenados no PostgreSQL serão utilizados como fonte para construção de um dashboard no Power BI.
-
-O dashboard será responsável pela camada de visualização e análise dos dados históricos do Campeonato Brasileiro Série A.
-
 ## Próximas Evoluções
 
-* Dashboard analítico em Power BI;
+* evolução do dashboard analítico em Power BI;
 * ampliação da cobertura de testes;
 * parametrização da execução do pipeline;
 * evolução das validações de qualidade dos dados;
