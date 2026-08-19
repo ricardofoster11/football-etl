@@ -6,11 +6,23 @@ O projeto coleta informações dos times participantes de uma temporada e o hist
 
 ## Dashboard
 
+Os dados armazenados no PostgreSQL são utilizados como fonte para construção de um dashboard no Power BI.
+
+O dashboard permite analisar o histórico do Campeonato Brasileiro Série A sob diferentes perspectivas.
+
+### Classificação por rodada
+
+Permite selecionar uma rodada específica e visualizar a classificação completa do campeonato naquele momento da temporada.
+
+A visualização apresenta posição, clube, pontos, jogos, vitórias, empates, derrotas, gols marcados, gols sofridos, saldo de gols e o desempenho nas últimas cinco partidas.
+
+![Classificação por rodada](docs/images/standings-by-round.png)
+
+### Evolução da posição no campeonato
+
 A classificação é armazenada rodada a rodada, permitindo acompanhar a evolução dos clubes durante o campeonato e comparar diferentes times ao longo da temporada.
 
 ![Evolução da posição no campeonato](docs/images/position-evolution.png)
-
-O dashboard utiliza o PostgreSQL como fonte de dados e está sendo desenvolvido no Power BI.
 
 ## Objetivo
 
@@ -158,8 +170,12 @@ football-etl/
 ├── docs/
 │   ├── images/
 │   │   └── position-evolution.png
+│   │   └── standings-by-round.png
 │   ├── api-contract.md
 │   └── databases.dbml
+│
+├── powerbi/
+│   └── pbi.pbix
 │
 ├── src/
 │   ├── config/
